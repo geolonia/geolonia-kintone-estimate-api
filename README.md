@@ -12,7 +12,7 @@ geolonia-kintone-estimate-api/
 ├── lib/
 │   └── app-stack.ts ← スタック定義
 ├── lambda/
-│   └── handler.ts         ← Lambda関数の本体
+│   └── handler.ts   ← Lambda関数の本体
 ├── cdk.json
 ├── package.json
 └── tsconfig.json
