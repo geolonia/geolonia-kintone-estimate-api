@@ -1,0 +1,1 @@
+# geolonia-kintone-estimate-api
