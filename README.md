@@ -3,7 +3,7 @@
 このプロジェクトは、AWS CDK を使用してデプロイされるシンプルな API です。
 クエリパラメータ `id` を受け取り、`Hello {id}` というレスポンスを返します。
 
-## 📁 ディレクトリ構成
+## ディレクトリ構成
 
 ```text
 geolonia-kintone-estimate-api/
