@@ -1,14 +1,64 @@
-# Welcome to your CDK TypeScript project
+# geolonia-kintone-estimate-api
 
-This is a blank project for CDK development with TypeScript.
+このプロジェクトは、AWS CDK を使用してデプロイされるシンプルな API です。
+クエリパラメータ `id` を受け取り、`Hello {id}` というレスポンスを返します。
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## 📦 構成内容
 
-## Useful commands
+- **AWS Lambda**（Node.js + TypeScript）
+- **API Gateway REST API**
+- **AWS CDK** によるインフラ構成（TypeScript）
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+## 📁 ディレクトリ構成
+
+```text
+geolonia-kintone-estimate-api/
+├── bin/
+│   └── app.ts       ← CDK エントリポイント
+├── lib/
+│   └── app-stack.ts ← スタック定義
+├── lambda/
+│   └── handler.ts         ← Lambda関数の本体
+├── cdk.json
+├── package.json
+└── tsconfig.json
+```
+
+## 🚀 セットアップ手順
+
+### 1. 初期セットアップ
+
+```bash
+git clone git@github.com:geolonia/geolonia-kintone-estimate-api.git
+cd geolonia-kintone-estimate-api
+npm install
+```
+
+### 2. ビルドとデプロイ
+
+```bash
+npm run build
+cdk deploy
+```
+
+## ✅ 使用方法
+
+デプロイが完了すると、API Gateway の URL が出力されます。
+
+例：
+
+
+https://<api-id>.execute-api.ap-northeast-1.amazonaws.com/v1/?id=world
+
+このようにアクセスすると、以下のようなレスポンスが返されます：
+
+Hello world
+
+## 🧪 動作確認
+
+ブラウザまたは curl で以下を実行：
+
+```bash
+curl "https://<api-id>.execute-api.ap-northeast-1.amazonaws.com/v1/?id=world"
+# => Hello world
+```
