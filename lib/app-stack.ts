@@ -12,6 +12,9 @@ export class AppStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_22_X,
       handler: 'handler.handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../lambda')),
+      environment: {
+        API_STAGE: process.env.API_STAGE || 'dev',
+      },
     })
 
     new apigateway.LambdaRestApi(this, 'EstimateDownloadApi', {

@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy:dev": "API_STAGE=dev npm run build && API_STAGE=dev cdk deploy",
+    "deploy:v1": "API_STAGE=v1 npm run build && API_STAGE=v1 cdk deploy"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.149",
