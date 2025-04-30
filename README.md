@@ -1,7 +1,7 @@
 # geolonia-kintone-estimate-api
 
 このプロジェクトは、AWS CDK を使用してデプロイされるシンプルな API です。
-クエリパラメータ `id` を受け取り、`Hello {id}` というレスポンスを返します。
+クエリパラメータ `id` を受け取り、`{"message":"Hello, ${id}!"}` というレスポンスを返します。
 
 ## ディレクトリ構成
 
@@ -41,5 +41,5 @@ npm run deploy:v1 // 本番環境にデプロイ
 
 ```bash
 curl "https://<api-id>.execute-api.ap-northeast-1.amazonaws.com/v1/?id=world"
-# => Hello world
+# => {"message":"Hello, world!"}
 ```
