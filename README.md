@@ -28,11 +28,11 @@ cd geolonia-kintone-estimate-api
 npm install
 ```
 
-### 2. ビルドとデプロイ
+### 2. デプロイ
 
 ```bash
-npm run build
-cdk deploy
+npm run deploy:dev // 開発環境にデプロイ
+npm run deploy:v1 // 本番環境にデプロイ
 ```
 
 ## 動作確認
